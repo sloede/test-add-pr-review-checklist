@@ -1,0 +1,16 @@
+name: Add review checklist
+
+on:
+  pull_request_target:
+    types: [opened]
+
+jobs:
+  add-review-checklist:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - name: Add review checklist
+        uses: sloede/add-pr-review-checklist@msl/initial-action
+        with:
+          file: .github/review-checklist.md
