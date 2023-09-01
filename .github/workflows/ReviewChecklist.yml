@@ -2,7 +2,7 @@ name: Add review checklist
 
 on:
   pull_request_target:
-    types: [opened,reopened]
+    types: [opened]
 
 permissions:
   pull-requests: write
@@ -14,6 +14,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
       - name: Add review checklist
-        uses: sloede/add-pr-review-checklist@msl/initial-action
+        uses: trixi-framework/add-pr-review-checklist@v1
         with:
-          file: .github/review-checklist.md
+          file: '.github/review-checklist.md'
+          no-checklist-keyword: '[no checklist]'
