@@ -14,7 +14,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
       - name: Add review checklist
-        uses: trixi-framework/add-pr-review-checklist@v1
+        uses: trixi-framework/add-pr-review-checklist@msl/handle-empty-pr-description
         with:
           file: '.github/review-checklist.md'
           no-checklist-keyword: '[no checklist]'
